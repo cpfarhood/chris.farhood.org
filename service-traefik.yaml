@@ -2,16 +2,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: traefik-chris.farhood.org
+  name: traefik
   labels:
-    app.kubernetes.io/instance: traefik-chris.farhood.org
+    app.kubernetes.io/instance: traefik
     app.kubernetes.io/name: traefik
   annotations:
     metallb.universe.tf/loadBalancerIPs: 65.43.40.100
 spec:
   loadBalancerIP: 65.43.40.100
   selector:
-    app.kubernetes.io/instance: traefik-chris.farhood.org
+    app.kubernetes.io/instance: traefik
     app.kubernetes.io/name: traefik
   type: LoadBalancer
   ports:
