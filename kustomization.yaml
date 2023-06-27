@@ -6,3 +6,4 @@ resources:
   - volumes.yaml
   - service-mariadb.yaml
   - deployment-wordpress.yaml
+  - ingress.yaml
