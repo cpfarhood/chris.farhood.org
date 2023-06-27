@@ -7,9 +7,9 @@ metadata:
     app.kubernetes.io/instance: traefik
     app.kubernetes.io/name: traefik
   annotations:
-    metallb.universe.tf/loadBalancerIPs: 65.43.40.100
+    metallb.universe.tf/loadBalancerIPs: 65.43.40.101
 spec:
-  loadBalancerIP: 65.43.40.100
+  loadBalancerIP: 65.43.40.101
   selector:
     app.kubernetes.io/instance: traefik
     app.kubernetes.io/name: traefik
