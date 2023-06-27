@@ -8,6 +8,8 @@ spec:
     http:
       paths:
       - backend:
+          path: /
+          pathType: Prefix
           service:
             name:  wordpress
             port:
