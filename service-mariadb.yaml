@@ -56,7 +56,7 @@ spec:
           name: mariadb
         volumeMounts:
         - name: dbdata
-          mountPath: "/var/db/mysql"
+          mountPath: "/var/lib/mysql"
         resources:
           requests:
             memory: "512Mi"
