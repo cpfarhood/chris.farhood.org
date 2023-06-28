@@ -26,7 +26,6 @@ spec:
     matchLabels:
       app: wordpress
       tier: db
-  serviceName: mariadb
   template:
     metadata:
       labels:
