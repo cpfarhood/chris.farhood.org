@@ -5,6 +5,7 @@ metadata:
   name: dbdata-chris.farhood.org
   labels:
     name: dbdata-chris.farhood.org
+    type: local
 spec:
   capacity:
     storage: 8Gi
