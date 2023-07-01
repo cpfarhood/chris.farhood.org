@@ -3,8 +3,11 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: dbdata
+  namespace: chris-farhood-org
   labels:
     name: dbdata
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   accessModes:
   - ReadWriteOnce
@@ -18,8 +21,11 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: wwwdata-chris.farhood.org
+  namespace: chris-farhood-org
   labels:
     name: wwwdata-chris.farhood.org
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   capacity:
     storage: 1Gi
@@ -42,8 +48,11 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: wwwdata
+  namespace: chris-farhood-org
   labels:
     name: wwwdata
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   accessModes:
   - ReadWriteMany
