@@ -50,9 +50,12 @@ spec:
         - containerPort: 80
           name: http
         volumeMounts:
-        - name: wwwdata
+        - name: wwwdata-old
           mountPath: /var/www/html
+        volumeMounts:
+        - name: wwwdata
+          mountPath: /var/www/html-new
       volumes:
-      - name: wwwdata
+      - name: wwwdata-old
         persistentVolumeClaim:
-          claimName: wwwdata
+          claimName: wwwdata-old
