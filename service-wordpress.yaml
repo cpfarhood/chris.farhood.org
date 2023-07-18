@@ -52,7 +52,6 @@ spec:
         volumeMounts:
         - name: wwwdata-old
           mountPath: /var/www/html
-        volumeMounts:
         - name: wwwdata
           mountPath: /var/www/html-new
       volumes:
