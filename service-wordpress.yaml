@@ -58,3 +58,6 @@ spec:
       - name: wwwdata-old
         persistentVolumeClaim:
           claimName: wwwdata-old
+      - name: wwwdata
+        persistentVolumeClaim:
+          claimName: wwwdata
