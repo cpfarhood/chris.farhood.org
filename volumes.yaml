@@ -19,7 +19,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: dbdata
+  name: wwwdata
   namespace: chris-farhood-org
   labels:
     name: wwwdata
@@ -63,7 +63,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: wwwdata
+  name: wwwdata-old
   namespace: chris-farhood-org
   labels:
     name: wwwdata-old
