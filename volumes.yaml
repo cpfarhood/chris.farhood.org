@@ -17,23 +17,6 @@ spec:
       storage: 8Gi
 ---
 apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: wwwdata
-  namespace: chris-farhood-org
-  labels:
-    name: wwwdata
-  annotations:
-    kustomize.toolkit.fluxcd.io/prune: disabled
-spec:
-  accessModes:
-  - ReadWriteMany
-  storageClassName: longhorn
-  resources:
-    requests: 
-      storage: 32Gi
----
-apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: wwwdata-chris.farhood.org
@@ -63,10 +46,10 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: wwwdata-old
+  name: wwwdata
   namespace: chris-farhood-org
   labels:
-    name: wwwdata-old
+    name: wwwdata
   annotations:
     kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
