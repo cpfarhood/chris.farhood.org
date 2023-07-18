@@ -5,5 +5,5 @@ secretGenerator:
 resources:
   - volumes.yaml
   - service-mariadb.yaml
-  - service-wordpress.yaml
+  #- service-wordpress.yaml
   - ingress.yaml
