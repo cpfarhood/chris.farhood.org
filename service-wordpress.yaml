@@ -52,6 +52,16 @@ spec:
         volumeMounts:
         - name: wwwdata
           mountPath: /var/www/html
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - wordpress
+            topologyKey: "kubernetes.io/hostname"    
       volumes:
       - name: wwwdata
         persistentVolumeClaim:
