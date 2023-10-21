@@ -50,13 +50,18 @@ spec:
         - containerPort: 80
           name: http
         volumeMounts:
-        - name: wwwdata
+        - name: wwwdata-old
           mountPath: /var/www/html
+        - name: wwwdata
+          mountPath: "/var/www/html-new"
       volumes:
-      - name: wwwdata
+      - name: wwwdata-old
         nfs:
           path: /mnt/pool0/sites/farhood.org/chris
           server: spielberg.farhoodliquor.dmz
+      - name: wwwdata
+        persistentVolumeClaim:
+          claimName: wwwdata
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -67,4 +72,3 @@ spec:
                 values:
                 - wordpress
             topologyKey: "kubernetes.io/hostname"    
-      
