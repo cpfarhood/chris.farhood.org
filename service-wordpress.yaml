@@ -52,6 +52,11 @@ spec:
         volumeMounts:
         - name: wwwdata
           mountPath: /var/www/html
+      volumes:
+      - name: wwwdata
+        nfs:
+          path: /mnt/pool0/sites/farhood.org/chris
+          server: spielberg.farhoodliquor.dmz
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -62,9 +67,4 @@ spec:
                 values:
                 - wordpress
             topologyKey: "kubernetes.io/hostname"    
-        volumes:
-        - name: wwwdata
-          nfs:
-            path: /mnt/pool0/sites/farhood.org/chris
-            server: spielberg.farhoodliquor.dmz
-
+      
