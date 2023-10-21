@@ -64,6 +64,7 @@ spec:
             topologyKey: "kubernetes.io/hostname"    
       volumes:
       - name: wwwdata
-        persistentVolumeClaim:
-          claimName: wwwdata
+        nfs:
+          path: /mnt/pool0/sites/farhood.org/chris
+          server: spielberg.farhoodliquor.dmz
 
