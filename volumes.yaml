@@ -27,7 +27,7 @@ metadata:
     kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   storageClassName: rook-ceph-block-nvme
   resources:
     requests: 
