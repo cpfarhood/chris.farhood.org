@@ -6,7 +6,6 @@ metadata:
   namespace: chris-farhood-org
   labels:
     name: dbdata
-  annotations:
     kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   accessModes:
@@ -23,7 +22,6 @@ metadata:
   namespace: chris-farhood-org
   labels:
     name: wwwdata
-  annotations:
     kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   accessModes:
