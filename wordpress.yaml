@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: wordpress
-        image: wordpress:latest
+        image: wordpress:6-php8.2-fpm
         env:
         - name: WORDPRESS_DB_HOST
           value: mariadb
