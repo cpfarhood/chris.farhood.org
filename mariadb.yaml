@@ -60,6 +60,8 @@ spec:
         volumeMounts:
         - name: dbdata
           mountPath: "/var/lib/mysql"
+        securityContext:
+          allowPrivilegeEscalation: false
         resources:
           requests:
             memory: "512Mi"
