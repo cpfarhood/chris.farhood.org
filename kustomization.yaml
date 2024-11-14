@@ -4,6 +4,7 @@ namespace: chris-farhood-org
 resources:
   - volumes.yaml
   - mariadb.yaml
-  - wordpress.yaml
+  - wordpress-deployment.yaml
+  - wordpress-service.yaml
   - ingress.yaml
   - sealedsecret-mariadb-pass.json
