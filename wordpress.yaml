@@ -54,7 +54,6 @@ spec:
           mountPath: "/var/www/html"
         securityContext:
           allowPrivilegeEscalation: false
-          runAsNonRoot: true
         resources:
           requests:
             memory: "128Mi"

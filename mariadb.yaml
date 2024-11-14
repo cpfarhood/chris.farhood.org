@@ -63,7 +63,6 @@ spec:
           mountPath: "/var/lib/mysql"
         securityContext:
           allowPrivilegeEscalation: false
-          runAsNonRoot: true
         resources:
           requests:
             memory: "128Mi"
