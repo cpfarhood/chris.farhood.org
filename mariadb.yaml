@@ -38,7 +38,8 @@ spec:
     spec:
       containers:
       - name: mariadb
-        image: mariadb:latest
+        image: mariadb:lts
+        imagePullPolicy: Always
         env:
         - name: MARIADB_ROOT_PASSWORD
           valueFrom:
@@ -70,6 +71,18 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "500m"
+        livelinessProbe:
+          exec:
+            command:
+            - /bin/sh
+            - -c
+            - exec mysql -h
+        readinessProbe:
+          exec:
+            command:
+            - /bin/sh
+            - -c
+            - exec mysql -h
       volumes:
       - name: dbdata
         persistentVolumeClaim:
